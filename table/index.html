@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>
+  
+    Table | Docs
+  
+</title>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+<link rel="shortcut icon" href="/mdb-bowser-demo/favicon.ico?v=x12">
+
+<!-- bower_components is deleted after vulcanization so files that should be
+  retained must be added to excludes array in `removeBowerComponents` function -->
+<script src="/mdb-bowser-demo/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="stylesheet" href="/mdb-bowser-demo/styles/custom.css" media="all" async type="text/css">
+<link rel="import" href="/mdb-bowser-demo/components/elements.html">
+
+
+<!--[if lt IE 10 ]>
+  <script type='text/javascript'>
+    alert( 'Your IE is Old' );
+
+    // or set a flag or something
+
+    var oldIE = true;
+  </script>
+<![endif]-->
+
+
+</head>
+<body class="layout horizontal center center-justified">
+
+  <div class="overlay"></div>
+
+  <atom-scaffold id="scaff">
+    <nav-toolbar>
+      <div class="product-logo" >
+        <a href="/mdb-bowser-demo/">
+          <img src="/mdb-bowser-demo/assets/logo.png" id="prod_brand" />
+        </a>
+      </div>
+    </nav-toolbar>
+
+    <header-toolbar style="width:100%">
+      <div class="horizontal layout center">
+        
+          <span id="selectedComponent">Table</span>
+          
+            <a class="buildStatus" href="https://travis-ci.org/makedatabetter/atom-table/">
+              <img src="https://travis-ci.org/makedatabetter/atom-table.svg?branch=master" alt="Build Status">
+            </a>
+          
+        
+        <!--  -->
+      </div>
+    </header-toolbar>
+
+    <nav-content>
+      <paper-menu class="nav-panel">
+        <paper-submenu opened>
+          <paper-item class="top menu-trigger iron-selected">
+            <span class="label">Elements</span>
+            <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+          </paper-item>
+          <paper-menu class="menu-content">
+          
+            <paper-submenu >
+              <paper-item class="menu-trigger ">
+                <span class="label">Form Basic</span>
+                <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+              </paper-item>
+              <paper-menu class="menu-content" selected="0">
+                
+                  <paper-item
+                    class="component-link "
+                    
+                    data-component="t-button"
+                    onclick="redirect('/mdb-bowser-demo/button/')"
+                    data-category="form">
+
+                    Button
+                    
+                  </paper-item>
+                
+              </paper-menu>
+            </paper-submenu>
+          
+            <paper-submenu  opened >
+              <paper-item class="menu-trigger  iron-selected ">
+                <span class="label">Data</span>
+                <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+              </paper-item>
+              <paper-menu class="menu-content" selected="0">
+                
+                  <paper-item
+                    class="component-link  iron-selected "
+                     active 
+                    data-component="atom-table"
+                    onclick="redirect('/mdb-bowser-demo/table/')"
+                    data-category="data">
+
+                    Table
+                    
+                  </paper-item>
+                
+              </paper-menu>
+            </paper-submenu>
+          
+
+          
+            
+          
+            
+          
+            
+              <paper-item
+                class="component-link "
+                
+                data-component="demo-tester"
+                onclick="redirect('/mdb-bowser-demo/demo-tester/')">
+
+                Demo Tester
+                
+              </paper-item>
+            
+          
+          </paper-menu>
+        </paper-submenu>
+
+        
+          <paper-item
+            class="top "
+            onClick="redirect('/mdb-bowser-demo/about/')">
+
+            About
+          </paper-item>
+        
+          <paper-item
+            class="top "
+            onClick="redirect('/mdb-bowser-demo/settings/')">
+
+            Settings
+          </paper-item>
+        
+      </paper-menu>
+    </nav-content>
+
+    <footer>
+      <p>atom-elements.io</p>
+    </footer>
+
+    <build-status
+      total="2"
+      element-ids-file-path="/mdb-bowser-demo/element-ids.json">
+    </build-status>
+
+    
+<div id="elementContent" class="content layout vertical fit content-component">
+  <div id="tabBar" class="layout horizontal">
+    <paper-tabs noink  selected="2" >
+      <paper-tab>Design Considerations</paper-tab>
+      <paper-tab>Dev Zone</paper-tab>
+      
+        <paper-tab>Demo</paper-tab>
+      
+      <paper-tab>Health</paper-tab>
+    </paper-tabs>
+  </div>
+  <iron-pages selected="2" class="flex" style="position:relative">
+    <div class="fit designTabWrapper">
+      <div class="designTab">
+        <marked-element>
+          <div class="markdown-html"></div>
+          <script type="text/markdown">
+						
+
+          </script>
+        </marked-element>
+      </div>
+    </div>
+    <div class="fit">
+      <iframe id="idIframe" src="/mdb-bowser-demo/table/bower_components/atom-table/" width="100%"></iframe>
+    </div>
+    
+      <div class="fit">
+        <t-demo-atom
+          demo-file="/mdb-bowser-demo/table/bower_components/atom-table/demo/atom.html"
+          properties-file="/mdb-bowser-demo/table/bower_components/atom-table/property.json"
+          el-name="atom-table"
+          el-disp-name="table"
+          el-dependencies='[{"relPath":"webcomponentsjs/webcomponents-lite.js","install":"webcomponents/webcomponentsjs#^0.7.0","type":"script"},{"relPath":"atom-table/atom-table.html","install":"makedatabetter/atom-table","type":"link"}]'
+          absolute-baseurl='https://makedatabetter.github.io/mdb-bowser-demo/'
+          baseurl='/mdb-bowser-demo'>
+          <template></template>
+        </t-demo-atom>
+      </div>
+    
+  </iron-pages>
+</div>
+
+<script type="text/javascript">
+  (function() {
+    var pages = document.querySelector('iron-pages');
+    var tabs = document.querySelector('paper-tabs');
+
+    tabs.addEventListener('iron-select', function () {
+      pages.selected = tabs.selected;
+    });
+  })();
+</script>
+
+  </atom-scaffold>
+
+  <script>
+    window.addEventListener('WebComponentsReady', function (e) {
+      var overlay = document.querySelector('.overlay');
+
+      if (overlay) {
+        overlay.style.display = 'none';
+      }
+    });
+
+    //this is __BAD__, first of all it shouldn't be global function
+    //second if this function doesn't do much apart from simple plain
+    //redirection then it should be handled using anchor tags
+    function redirect(url) {
+      window.location = url;
+    }
+  </script>
+</body>
+</html>
