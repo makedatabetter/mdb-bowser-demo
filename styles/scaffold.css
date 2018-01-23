@@ -1,0 +1,104 @@
+/*
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+*/
+
+:host {
+    display: block;
+  }
+  
+  .nav {
+    border-right: 1px solid #ccc;
+  }
+  
+  .main {
+    background-color: #eee;
+  }
+  
+  
+  
+  #left-panel paper-toolbar {
+    background-color: none;
+    -webkit-box-shadow: -1px 0px 6px 0px #b7b7b7;
+    -moz-box-shadow: -1px 0px 6px 0px #b7b7b7;
+    box-shadow: -1px 0px 6px 0px #b7b7b7;
+  }
+  
+  .content {
+    height: 100%;
+  }
+  
+  [main-scaff] {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  [main-scaff] paper-header-panel.main {
+    flex: 1;
+  }
+  
+  /* paper-toolbar{
+    box-shadow: none!important;
+  } */
+  #left-panel{
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+  }
+  #left-panel .main-nav{
+    background: #ffffff;
+    overflow: auto;
+  }
+  #left-panel ::content paper-menu{
+    background: #ffffff;
+  }
+     
+  footer.layout{
+    padding-left:20px;
+    font-size: 11px;
+    min-height: 60px;
+    border-top: 1px solid #f5f5f5;  
+  }
+      
+  #mainPanel paper-toolbar,#mainPanel paper-toolbar t-button{
+    color: var(--default-primary-color);
+    font-size: 24px;
+    /* background: var(--default-primary-color); */
+    background: #ffffff;
+    -webkit-box-shadow: -1px 0px 6px 0px #b7b7b7;
+    -moz-box-shadow: -1px 0px 6px 0px #b7b7b7;
+    box-shadow: -1px 0px 6px 0px #b7b7b7;
+  }
+  #left-panel paper-toolbar {
+    background: none;
+  }
+  
+   :host ::content div#tabBar,
+  :host ::content div#tabBar paper-tabs {
+    height: 54px;
+    color: #fff;
+    background: var(--default-primary-color);
+    padding: 0;
+    font-size: 14px;
+    border-bottom: 1px solid;
+    border-color: var(--grey-two);
+  }
+  :host ::content div#tabBar paper-tabs paper-tab {
+      -webkit-flex: none;
+      -moz-flex: none;
+      -ms-flex: none;
+      -o-flex: none;
+      flex: none;
+    }
+     :host ::content div#tabBar paper-tab:focus .tab-content.paper-tab, :host ::content div#tabBar paper-tab .tab-content.paper-tab{
+        opacity: 1;
+        font-weight: 500;
+    }
+    :host ::content div#tabBar paper-tabs #selectionBar{
+        background-color: var(--default-primary-color);
+        height:1px;
+    }
